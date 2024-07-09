@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="10.0dip" android:paddingTop="@dimen/light_layout_padding_top" android:paddingRight="10.0dip" android:paddingBottom="@dimen/light_layout_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_light1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <ImageView android:id="@id/iv_light1" android:layout_width="@dimen/light_layout_width" android:layout_height="@dimen/light_layout_height" android:src="@drawable/light_pic" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/text_color_white" android:id="@id/tv_light1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/light_name_margin_top" android:text="Light01" android:layout_below="@id/iv_light1" android:layout_centerHorizontal="true" />
+        <View android:id="@id/light1_color" android:tag="false" android:background="@drawable/light_color" android:layout_width="@dimen/light_color_width" android:layout_height="@dimen/light_color_height" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/layout_light2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_toRightOf="@id/layout_light1" android:layout_centerVertical="true">
+        <ImageView android:id="@id/iv_light2" android:layout_width="@dimen/light_layout_width" android:layout_height="@dimen/light_layout_height" android:src="@drawable/light_pic" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/text_color_white" android:id="@id/tv_light2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/light_name_margin_top" android:text="Light02" android:layout_below="@id/iv_light2" android:layout_centerHorizontal="true" />
+        <View android:id="@id/light2_color" android:tag="false" android:background="@drawable/light_color" android:layout_width="@dimen/light_color_width" android:layout_height="@dimen/light_color_height" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/layout_light3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_toRightOf="@id/layout_light2" android:layout_centerVertical="true">
+        <ImageView android:id="@id/iv_light3" android:layout_width="@dimen/light_layout_width" android:layout_height="@dimen/light_layout_height" android:src="@drawable/light_pic" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/text_color_white" android:id="@id/tv_light3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/light_name_margin_top" android:text="Light03" android:layout_below="@id/iv_light3" android:layout_centerHorizontal="true" />
+        <View android:id="@id/light3_color" android:tag="false" android:background="@drawable/light_color" android:layout_width="@dimen/light_color_width" android:layout_height="@dimen/light_color_height" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/layout_light4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_toRightOf="@id/layout_light3" android:layout_centerVertical="true">
+        <ImageView android:id="@id/iv_light4" android:layout_width="@dimen/light_layout_width" android:layout_height="@dimen/light_layout_height" android:src="@drawable/light_pic" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/text_color_white" android:id="@id/tv_light4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/light_name_margin_top" android:text="Light04" android:layout_below="@id/iv_light4" android:layout_centerHorizontal="true" />
+        <View android:id="@id/light4_color" android:tag="false" android:background="@drawable/light_color" android:layout_width="@dimen/light_color_width" android:layout_height="@dimen/light_color_height" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/iv_on" android:layout_width="@dimen/switcher_width" android:layout_height="@dimen/switcher_height" android:src="@drawable/light_iv_on" android:scaleType="fitXY" />
+        <ImageView android:id="@id/iv_off" android:layout_width="@dimen/switcher_width" android:layout_height="@dimen/switcher_height" android:src="@drawable/light_iv_off" android:scaleType="fitXY" />
+    </LinearLayout>
+</RelativeLayout>

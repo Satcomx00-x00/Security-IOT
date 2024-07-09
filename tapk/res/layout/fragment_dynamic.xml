@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/head" />
+    <View android:id="@id/line" android:background="@color/white_50" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_below="@id/header" />
+    <include android:id="@id/bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/layout_color_bottom" />
+    <RelativeLayout android:background="@drawable/header_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/bottom" android:layout_below="@id/line">
+        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/tv_mode" android:background="@drawable/content_title_bg" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layout_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="@dimen/layout_mode_topmargin" android:layout_marginRight="20.0dip" android:layout_below="@id/tv_mode">
+            <ImageView android:id="@id/iv_decre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="28.0dip" android:src="@drawable/image_s_sub" />
+            <ImageView android:id="@id/iv_incre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="28.0dip" android:src="@drawable/image_s_add" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/layout_mode" android:layout_width="fill_parent" android:layout_height="@dimen/layout_mode_height" android:layout_marginLeft="20.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/layout_value">
+            <Button android:id="@id/btnSound" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:soundEffectsEnabled="true" />
+            <ImageView android:background="@drawable/state_form_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ImageView android:background="@drawable/state_02_pre" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_centerInParent="true" />
+            <com.bfour.jingcaiyi.view.wheelview.WheelView android:id="@id/wheelview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="30.0dip" android:layout_marginBottom="30.0dip" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/layout_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="@dimen/mode_progresslayout_topmargin" android:layout_marginRight="10.0dip" android:layout_below="@id/layout_mode">
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_value" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" android:layout_alignParentLeft="true" />
+            <SeekBar android:id="@id/sb_feel" android:paddingLeft="@dimen/seekbar_padding" android:paddingRight="@dimen/seekbar_padding" android:layout_width="fill_parent" android:layout_height="24.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:max="100" android:progressDrawable="@drawable/seekbar_bg" android:thumb="@drawable/scroll_bar_03" android:layout_below="@id/tv_value" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <RadioGroup android:orientation="horizontal" android:id="@id/rg_tab" android:layout_width="fill_parent" android:layout_height="@dimen/main_bottom_layout_height">
+        <RadioButton android:id="@id/rb_setting" android:background="@drawable/rb_setting_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:layout_weight="1.0" />
+        <RadioButton android:id="@id/rb_color" android:background="@drawable/rb_color_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:layout_weight="1.0" />
+        <RadioButton android:id="@id/rb_dynamic" android:background="@drawable/rb_dynamic_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:layout_weight="1.0" />
+        <RadioButton android:id="@id/rb_music" android:background="@drawable/rb_music_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:layout_weight="1.0" />
+        <RadioButton android:id="@id/rb_clock" android:background="@drawable/rb_clock_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:layout_weight="1.0" />
+    </RadioGroup>
+</LinearLayout>

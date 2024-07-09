@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modes">
+        <item>Mode 1: Automatic color changing</item>
+        <item>Mode 2: White color fades in</item>
+        <item>Mode 3: Four colors fade in fade out</item>
+        <item>Mode 4: Seven colors flash</item>
+        <item>Mode 5: Random color fash</item>
+        <item>Mode 6：Red color gradual changing+flash</item>
+        <item>Mode 7: Green color gradual changing+flash</item>
+        <item>Mode8: Blue color gradual changing+flash</item>
+    </string-array>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_colorpicker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_picker_margintop" android:src="@drawable/color_wheel" android:scaleType="matrix" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/iv_colorpicker_handler" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_picker_margintop" android:src="@drawable/color_wheel02" android:layout_centerHorizontal="true" />
+    <ImageView android:paddingTop="@dimen/light_icon_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/color_light_pic" android:layout_centerHorizontal="true" />
+    <View android:id="@id/iv_middle_light_color" android:background="@drawable/middle_light_color" android:layout_width="@dimen/middle_light_size" android:layout_height="@dimen/middle_light_size" android:layout_marginTop="@dimen/middle_light_topmargin" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_value" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100%" android:layout_alignBottom="@id/iv_colorpicker" android:layout_alignParentLeft="true" />
+    <RelativeLayout android:id="@id/layout_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/iv_colorpicker">
+        <SeekBar android:id="@id/sb_feel" android:paddingLeft="@dimen/seekbar_padding" android:paddingRight="@dimen/seekbar_padding" android:layout_width="fill_parent" android:layout_height="24.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:max="100" android:progressDrawable="@drawable/seekbar_bg" android:thumb="@drawable/scroll_bar_03" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/header_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/head" />
+    <View android:id="@id/line" android:background="@color/white_50" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_below="@id/header" />
+    <LinearLayout android:id="@id/indicator" android:layout_width="fill_parent" android:layout_height="@dimen/viewpage_tab_height" android:baselineAligned="false" android:layout_below="@id/line">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:textSize="18.0sp" android:textColor="#ff3ba3e0" android:id="@id/bt_color" android:background="#ff464b51" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Color" />
+            <Button android:id="@id/v_color" android:background="#ff3ba3e0" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:textSize="18.0sp" android:textColor="@android:color/white" android:id="@id/bt_balance" android:background="#ff1c2029" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Balance" />
+            <Button android:id="@id/v_balance" android:background="#ff1c2029" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:textSize="18.0sp" android:textColor="@android:color/white" android:id="@id/bt_kelvin" android:background="#ff1c2029" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Kelvin" />
+            <Button android:id="@id/v_kelvin" android:background="#ff1c2029" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:textSize="18.0sp" android:textColor="@android:color/white" android:id="@id/bt_saturation" android:background="#ff1c2029" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Saturation" />
+            <Button android:id="@id/v_saturation" android:background="#ff1c2029" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/ayx_ui_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/indicator">
+        <ImageView android:id="@id/iv_colorpicker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_picker_margintop" android:src="@drawable/color_wheel" android:scaleType="matrix" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/iv_colorpicker_handler" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_picker_margintop" android:src="@drawable/color_wheel02" android:layout_centerHorizontal="true" />
+        <ImageView android:paddingTop="@dimen/light_icon_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/color_light_pic" android:layout_centerHorizontal="true" />
+        <View android:id="@id/iv_middle_light_color" android:background="@drawable/middle_light_color" android:layout_width="@dimen/middle_light_size" android:layout_height="@dimen/middle_light_size" android:layout_marginTop="@dimen/middle_light_topmargin" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_value" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100%" android:layout_alignBottom="@id/iv_colorpicker" android:layout_alignParentLeft="true" />
+        <RelativeLayout android:id="@id/layout_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/iv_colorpicker">
+            <SeekBar android:id="@id/sb_feel" android:paddingLeft="@dimen/seekbar_padding" android:paddingRight="@dimen/seekbar_padding" android:layout_width="fill_parent" android:layout_height="24.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:max="100" android:progressDrawable="@drawable/seekbar_bg" android:thumb="@drawable/scroll_bar_03" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/ayx_ui_balance" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/indicator">
+        <AbsoluteLayout android:id="@id/ayx_balance_iv_colorpicker" android:background="@drawable/pinghe" android:layout_width="240.0dip" android:layout_height="240.0dip" android:layout_marginTop="@dimen/color_balancepic_topmargin" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/ball" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ball" />
+        </AbsoluteLayout>
+        <RelativeLayout android:id="@id/layout_switch" android:background="@drawable/off_btn" android:paddingTop="4.0dip" android:layout_width="100.0dip" android:layout_height="32.0dip" android:layout_marginTop="@dimen/color_balanceswitcher_topmargin" android:layout_below="@id/ayx_balance_iv_colorpicker" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/iv_switch" android:tag="false" android:layout_width="50.0dip" android:layout_height="35.0dip" android:src="@drawable/white_btn" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/ayx_ui_kelvin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/indicator">
+        <ImageView android:id="@id/ayx_kelvin_iv_colorpicker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_picker_margintop" android:src="@drawable/sewen_wheel" android:scaleType="matrix" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/ayx_kelvin_iv_colorpicker_handler" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_picker_margintop" android:src="@drawable/color_wheel02" android:layout_centerHorizontal="true" />
+        <ImageView android:paddingTop="@dimen/light_icon_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/color_light_pic" android:layout_centerHorizontal="true" />
+        <View android:id="@id/ayx_kelvin_iv_middle_light_color" android:background="@drawable/middle_light_color" android:layout_width="@dimen/middle_light_size" android:layout_height="@dimen/middle_light_size" android:layout_marginTop="@dimen/middle_light_topmargin" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/ayx_kelvin_tv_value" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100%" android:layout_alignBottom="@id/ayx_kelvin_iv_colorpicker" android:layout_alignParentLeft="true" />
+        <RelativeLayout android:id="@id/ayx_kelvin_layout_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="@dimen/layout_progress_topmargin" android:layout_marginRight="10.0dip" android:layout_below="@id/ayx_kelvin_iv_colorpicker">
+            <SeekBar android:id="@id/ayx_kelvin_sb_feel" android:paddingLeft="@dimen/seekbar_padding" android:paddingRight="@dimen/seekbar_padding" android:layout_width="fill_parent" android:layout_height="24.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:max="100" android:progressDrawable="@drawable/seekbar_bg" android:thumb="@drawable/scroll_bar_03" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/ayx_ui_saturation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/indicator">
+        <AbsoluteLayout android:id="@id/ayx_sa_layout_colorpicker" android:background="@drawable/baohe01" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginLeft="40.0dip" android:layout_marginTop="@dimen/color_saturationpic_topmargin" android:layout_marginRight="40.0dip">
+            <ImageView android:id="@id/ayx_sa_iv_handler" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/move" />
+        </AbsoluteLayout>
+        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/ayx_sa_tv_value" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="100%" android:layout_below="@id/ayx_sa_layout_colorpicker" android:layout_alignParentLeft="true" />
+        <RelativeLayout android:id="@id/ayx_sa_layout_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/ayx_sa_tv_value">
+            <SeekBar android:id="@id/ayx_sa_sb_feel" android:paddingLeft="@dimen/seekbar_padding" android:paddingRight="@dimen/seekbar_padding" android:layout_width="fill_parent" android:layout_height="24.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:max="100" android:progressDrawable="@drawable/seekbar_bg" android:thumb="@drawable/scroll_bar_03" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <include android:id="@id/bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/layout_color_bottom" />
+</RelativeLayout>

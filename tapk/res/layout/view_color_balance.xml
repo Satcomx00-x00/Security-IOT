@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <AbsoluteLayout android:id="@id/iv_colorpicker" android:background="@drawable/pinghe" android:layout_width="240.0dip" android:layout_height="240.0dip" android:layout_marginTop="@dimen/color_balancepic_topmargin" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/ball" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ball" />
+    </AbsoluteLayout>
+    <RelativeLayout android:id="@id/layout_switch" android:background="@drawable/off_btn" android:paddingTop="4.0dip" android:layout_width="100.0dip" android:layout_height="32.0dip" android:layout_marginTop="@dimen/color_balanceswitcher_topmargin" android:layout_below="@id/iv_colorpicker" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/iv_switch" android:tag="false" android:layout_width="50.0dip" android:layout_height="35.0dip" android:src="@drawable/white_btn" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

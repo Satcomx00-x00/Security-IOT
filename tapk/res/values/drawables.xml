@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="transparent">#00000000</item>
+    <item type="drawable" name="btn_login_normal">#33ffffff</item>
+    <item type="drawable" name="btn_login_press">#7fffffff</item>
+    <item type="drawable" name="listview_item_selected">#ff45474b</item>
+    <item type="drawable" name="light_item_nor">#ff1e222b</item>
+    <item type="drawable" name="light_item_pre">#ff3c3c3c</item>
+</resources>

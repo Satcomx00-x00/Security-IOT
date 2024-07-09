@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/header_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" layout="@layout/head" />
+    <View android:id="@id/line" android:background="@color/white_50" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_below="@id/header" />
+    <LinearLayout android:id="@id/indicator" android:layout_width="fill_parent" android:layout_height="@dimen/viewpage_tab_height" android:baselineAligned="false" android:layout_below="@id/line">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:textSize="18.0sp" android:textColor="#ff3ba3e0" android:id="@id/bt_color" android:background="#ff464b51" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Music" />
+            <Button android:id="@id/v_color" android:background="#ff3ba3e0" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:textSize="18.0sp" android:textColor="@android:color/white" android:id="@id/bt_balance" android:background="#ff1c2029" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Voice Control" />
+            <Button android:id="@id/v_balance" android:background="#ff1c2029" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/ayx_ui_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/indicator">
+        <ImageView android:id="@id/ayx_mus_iv_icon" android:layout_width="@dimen/music_pic_size" android:layout_height="@dimen/music_pic_size" android:layout_marginTop="@dimen/music_pic_topmargin" android:src="@drawable/music_wheel_01" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ayx_mus_layout_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/music_funlayout_leftmargin" android:layout_marginTop="@dimen/music_funlayout_topmargin" android:layout_marginRight="@dimen/music_funlayout_rightmargin" android:layout_below="@id/ayx_mus_iv_icon">
+            <ImageView android:id="@id/ayx_mus_iv_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/music_moshi_danqu" />
+            <ImageView android:id="@id/ayx_mus_iv_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/iv_music_back" />
+            <ImageView android:id="@id/ayx_mus_iv_play" android:tag="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/iv_music_play" />
+            <ImageView android:id="@id/ayx_mus_iv_forward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/iv_music_forward" />
+            <ImageView android:id="@id/ayx_mus_iv_folder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/music_wenjianjia_icon" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/ayx_ui_balance" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/indicator">
+        <RelativeLayout android:id="@id/layout_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/voice_pic_topmargin" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/iv_icon" android:layout_width="@dimen/music_pic_size" android:layout_height="@dimen/music_pic_size" android:src="@drawable/shengkong_pic01" android:scaleType="centerInside" android:layout_centerHorizontal="true" />
+            <com.bfour.jingcaiyi.view.RingView android:id="@id/ringView" android:layout_width="@dimen/ringview_width" android:layout_height="@dimen/ringview_width" android:layout_marginTop="@dimen/ringview_tomargin" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="24.0sp" android:textColor="@color/text_color_blue" android:gravity="center" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:05" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/layout_switch" android:background="@drawable/off_btn" android:paddingTop="4.0dip" android:layout_width="@dimen/voice_switcher_width" android:layout_height="@dimen/voice_switcher_height" android:layout_marginTop="@dimen/voice_switcherlayout_topmargin" android:layout_below="@id/layout_time" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/iv_switch" android:tag="false" android:layout_width="50.0dip" android:layout_height="35.0dip" android:src="@drawable/white_btn" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <include android:id="@id/bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/layout_color_bottom" />
+</RelativeLayout>
